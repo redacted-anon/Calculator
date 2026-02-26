@@ -27,7 +27,7 @@ bool status = true;
             // Description of what the program does
             printf("\n[DESCRIPTION]");
             printf("\n\tThis is a simple calculator. In it's current form, the program only handles integers,");
-            printf("\n\tthough I will be adding login in the future to handle both integers and floating point numbers.");
+            printf("\n\tthough I will be adding logic in the future to handle both integers and floating point numbers.");
             
             // Instructions on how to use the calculator
             printf("\n\n[USAGE]");
