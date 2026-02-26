@@ -37,7 +37,7 @@ bool status = true;
             printf("\t[+]\t Addition\n");
             printf("\t[-]\t Subtraction\n");
             printf("\t[*]\t Multiplication\n");
-            printf("\t[/]\t Division\n");
+            printf("\t[/]\t Division\n\n");
         } else
         {
             // Parse input
