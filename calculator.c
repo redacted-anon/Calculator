@@ -1,7 +1,17 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdlib.h>
 
+
+void clear_screen(void)
+{
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
 
 void calculate(void)
 {
@@ -22,7 +32,8 @@ bool status = true;
         if (strcmp(input, "quit") == 0)
         {
             status = false;
-        } else if (strcmp(input, "help") == 0)
+        } 
+        else if (strcmp(input, "help") == 0)
         {
             // Description of what the program does
             printf("\n[DESCRIPTION]");
@@ -38,7 +49,15 @@ bool status = true;
             printf("\t[-]\t Subtraction\n");
             printf("\t[*]\t Multiplication\n");
             printf("\t[/]\t Division\n\n");
-        } else
+        } 
+        else if (strcmp(input, "clear") == 0)
+        {
+            clear_screen();
+            printf("\n(type 'quit' to exit)\n");
+            printf("(type 'help' for help)\n");
+            printf("(type 'clear' to clear the screen)\n");
+        } 
+        else
         {
             // Parse input
             int matched = sscanf(input, "%lf %c %lf", &left, &op, &right);
@@ -86,6 +105,7 @@ int main(void)
 {
     printf("\n(type 'quit' to exit)\n");
     printf("(type 'help' for help)\n");
+    printf("(type 'clear' to clear the screen)\n");
     calculate();
 
     printf("\n");
