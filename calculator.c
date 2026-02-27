@@ -83,7 +83,7 @@ bool status = true;
                     case '/':
                         if (right == 0)
                         {
-                            printf("\n[Undefined] Division by zero\n");
+                            printf("\n\t[Undefined] Division by zero\n");
                         } else
                         {
                             result = left / right;
