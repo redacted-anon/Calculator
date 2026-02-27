@@ -103,6 +103,7 @@ bool status = true;
                         printf("[Unsupported operator]");
                         break;
                 }
+
                 if (valid_result == true)
                 {   // Checks if result is an integer or double
                     if (result == (int)result)
@@ -116,6 +117,7 @@ bool status = true;
                 {
                     printf("\n\t[Undefined behavior]\n");
                 }
+                
             } else 
             {
                 printf("\n\t[Error] Invalid input or format: <num> <operator> <num>\n\n");
