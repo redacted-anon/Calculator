@@ -84,7 +84,9 @@ bool status = true;
                         if (right == 0)
                         {
                             printf("\n\t[Undefined] Division by zero\n");
-                        } else
+                            break;
+                        } 
+                        else
                         {
                             result = left / right;
                             break;
