@@ -64,7 +64,7 @@ bool status = true;
 
             if (matched == 3)
             {
-                int result;
+                double result;
 
                 switch (op)
                 {
@@ -92,7 +92,14 @@ bool status = true;
                         }
                         break;
                 }
-                printf("\n\tResult: %d\n\n", result);
+                // Checks if result is an integer or double
+                if (result == (int)result)
+                {
+                    printf("\n\tResult: %d\n\n", (int)result);
+                } else 
+                {
+                    printf("\n\tResult: %g\n\n", result);
+                }
             } else 
             {
                 printf("\n\t[Error] Invalid input or format: <num> <operator> <num>\n\n");
