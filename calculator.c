@@ -44,11 +44,11 @@ bool status = true;
             printf("\n\n[USAGE]");
             printf("\n\tPass your input as: <operand><operator><operand>");
             printf("\n\tFor example: 2+2\n\n");
-            printf("The following operators are available:\n\n");
-            printf("\t[+]\t Addition\n");
-            printf("\t[-]\t Subtraction\n");
-            printf("\t[*]\t Multiplication\n");
-            printf("\t[/]\t Division\n\n");
+            printf("\tThe following operators are available:\n\n");
+            printf("\t\t[+]\t Addition\n");
+            printf("\t\t[-]\t Subtraction\n");
+            printf("\t\t[*]\t Multiplication\n");
+            printf("\t\t[/]\t Division\n\n");
         } 
         else if (strcmp(input, "clear") == 0)
         {
