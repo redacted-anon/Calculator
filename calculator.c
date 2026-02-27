@@ -89,8 +89,8 @@ bool status = true;
                         else
                         {
                             result = left / right;
-                            break;
                         }
+                        break;
                 }
                 printf("\n\tResult: %d\n\n", result);
             } else 
