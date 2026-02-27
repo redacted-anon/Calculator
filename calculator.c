@@ -65,40 +65,56 @@ bool status = true;
             if (matched == 3)
             {
                 double result;
+                bool valid_result = true;
 
                 switch (op)
                 {
                     case '+':
                         result = left + right;
+                        valid_result = true;
                         break;
 
                     case '-':
                         result = left - right;
+                        valid_result = true;
                         break;
 
                     case '*':
                         result = left * right;
+                        valid_result = true;
                         break;
 
                     case '/':
                         if (right == 0)
                         {
-                            printf("\n\t[Undefined] Division by zero\n");
+                            valid_result = false;
                             break;
                         } 
                         else
                         {
                             result = left / right;
+                            valid_result = true;
+                            break;
                         }
                         break;
+
+                    default:
+                        valid_result = false;
+                        printf("[Unsupported operator]");
+                        break;
                 }
-                // Checks if result is an integer or double
-                if (result == (int)result)
+                if (valid_result == true)
+                {   // Checks if result is an integer or double
+                    if (result == (int)result)
+                    {
+                        printf("\n\tResult: %d\n\n", (int)result);
+                    } else 
+                    {
+                        printf("\n\tResult: %g\n\n", result);
+                    }
+                } else
                 {
-                    printf("\n\tResult: %d\n\n", (int)result);
-                } else 
-                {
-                    printf("\n\tResult: %g\n\n", result);
+                    printf("\n\t[Undefined behavior]\n");
                 }
             } else 
             {
