@@ -67,9 +67,9 @@ bool status = true;
             // Instructions on how to use the calculator
             printf("\n\n\n\n[COMMANDS]");
             printf("\n\n\tThe following commands are available:\n\n");
-            printf("\t\t['help', 'h'] ----------------------- Will list information on how to use the program.\n");
-            printf("\n\n\t\t['clear', 'cls' 'c'] ---------------- Will clear the console.\n");
-            printf("\n\n\t\t['quit', 'q' 'exit', 'e'] ----------- Will exit the program.\n\n\n");
+            printf("\t\t['help', 'h'] ----------------------- Lists program information.\n");
+            printf("\n\n\t\t['clear', 'cls' 'c'] ---------------- Clears the console.\n");
+            printf("\n\n\t\t['quit', 'q' 'exit', 'e'] ----------- Exits the program.\n\n\n");
 
         } 
         else if (strcmp(input, "clear") == 0 || (strcmp(input, "CLEAR") == 0) || (strcmp(input, "cls") == 0) || (strcmp(input, "CLS") == 0) || (strcmp(input, "c") == 0) || (strcmp(input, "C") == 0))
