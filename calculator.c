@@ -29,33 +29,39 @@ bool status = true;
         scanf("%s", input);
 
         // User can type quit to exit
-        if (strcmp(input, "quit") == 0)
+        if (strcmp(input, "quit") == 0 || (strcmp(input, "QUIT") == 0) || (strcmp(input, "q") == 0) || (strcmp(input, "Q") == 0) || (strcmp(input, "exit") == 0) || (strcmp(input, "EXIT") == 0) || (strcmp(input, "e") == 0) || (strcmp(input, "E") == 0))
         {
             status = false;
         } 
-        else if (strcmp(input, "help") == 0)
+        else if (strcmp(input, "help") == 0 || (strcmp(input, "HELP") == 0) || (strcmp(input, "h") == 0) || (strcmp(input, "H") == 0))
         {
             // Description of what the program does
-            printf("\n[DESCRIPTION]");
-            printf("\n\tThis is a simple calculator. In it's current form, the program only handles integers,");
-            printf("\n\tthough I will be adding logic in the future to handle both integers and floating point numbers.");
+            printf("\n\n[DESCRIPTION]");
+            printf("\n\n\tThis is a simple calculator that I am building to teach myself C. It currently supports simple calculations,");
+            printf("\n\tthough I plan on implementing solutions to add more advanced computation capability.");
             
             // Instructions on how to use the calculator
-            printf("\n\n[USAGE]");
-            printf("\n\tPass your input as: <operand><operator><operand>");
+            printf("\n\n\n\n[USAGE]");
+            printf("\n\n\tPass your input as: <operand><operator><operand>");
             printf("\n\tFor example: 2+2\n\n");
             printf("\tThe following operators are available:\n\n");
             printf("\t\t[+]\t Addition\n");
             printf("\t\t[-]\t Subtraction\n");
             printf("\t\t[*]\t Multiplication\n");
-            printf("\t\t[/]\t Division\n\n");
+            printf("\t\t[/]\t Division");
+
+            // Instructions on how to use the calculator
+            printf("\n\n\n\n[COMMANDS]");
+            printf("\n\n\tThe following commands are available:\n\n");
+            printf("\t\t['help', 'h'] ----------------------- Will list information on how to use the program.\n");
+            printf("\n\n\t\t['clear', 'cls' 'c'] ---------------- Will clear the console.\n");
+            printf("\n\n\t\t['quit', 'q' 'exit', 'e'] ----------- Will exit the program.\n\n\n");
+
         } 
-        else if (strcmp(input, "clear") == 0)
+        else if (strcmp(input, "clear") == 0 || (strcmp(input, "CLEAR") == 0) || (strcmp(input, "cls") == 0) || (strcmp(input, "CLS") == 0) || (strcmp(input, "c") == 0) || (strcmp(input, "C") == 0))
         {
             clear_screen();
-            printf("\n(type 'quit' to exit)\n");
             printf("(type 'help' for help)\n");
-            printf("(type 'clear' to clear the screen)\n");
         } 
         else
         {
@@ -117,7 +123,7 @@ bool status = true;
                 {
                     printf("\n\t[Undefined behavior]\n");
                 }
-                
+
             } else 
             {
                 printf("\n\t[Error] Invalid input or format: <num> <operator> <num>\n\n");
@@ -130,9 +136,7 @@ bool status = true;
 // Main function
 int main(void)
 {
-    printf("\n(type 'quit' to exit)\n");
     printf("(type 'help' for help)\n");
-    printf("(type 'clear' to clear the screen)\n");
     calculate();
 
     printf("\n");
