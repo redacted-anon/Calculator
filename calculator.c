@@ -2,6 +2,20 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
+#ifdef _WIN32
+    #include <windows.h>
+#endif
+
+
+void fullscreen(void)
+{
+    #ifdef _WIN32
+        keybd_event(VK_MENU, 0x38, 0, 0);
+        keybd_event(VK_RETURN, 0x1c, 0, 0);
+        keybd_event(VK_RETURN, 0x1c, KEYEVENTF_KEYUP, 0);
+        keybd_event(VK_MENU, 0x38, KEYEVENTF_KEYUP, 0);
+    #endif
+}
 
 
 void clear_screen(void)
@@ -136,6 +150,8 @@ bool status = true;
 // Main function
 int main(void)
 {
+    fullscreen();
+
     printf("(type 'help' for help)\n");
     calculate();
 
